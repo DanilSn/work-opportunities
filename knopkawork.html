@@ -3,93 +3,190 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Возможности Ассоциации</title>
+    <title>Ассоциация "Народный Фермер"</title>
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
     <style>
         body {
             margin: 0;
-            padding: 20px;
+            padding: 0;
             font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background-color: #ffffff;
+            background-color: #ffffff !important;
             color: #2F2F2F;
-            line-height: 1.6;
         }
 
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
+        .header {
+            position: relative;
+            padding: 40px 20px;
+            text-align: center;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://xn----7sbmeawknecfezfcs7b7h.xn--p1ai/wp-content/uploads/2025/03/stokavaya-fotka-dlya-veb-prilozheniya-fon-dlya-nazvaniya-assocziacziya-nf-g.-nsk.avif');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            min-height: 150px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: inherit;
+            background-size: cover;
+            background-position: center;
+            filter: blur(0px);
+            z-index: -1;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+            line-height: 1.3;
+            position: relative;
+            z-index: 1;
         }
 
         .section {
-            margin-bottom: 30px;
             padding: 20px;
+            margin: 20px;
             background: #f9f9f9;
             border-radius: 10px;
             box-shadow: 0 2px 4px rgba(0,0,0,0.05);
         }
 
-        h1 {
-            color: #2ea32e;
-            text-align: center;
-            margin-bottom: 30px;
-        }
-
-        h2 {
-            color: #2ea32e;
-            margin-top: 0;
+        .section-title {
             font-size: 20px;
+            font-weight: bold;
+            color: #2ea32e;
+            margin-bottom: 15px;
         }
 
-        p {
-            margin: 10px 0;
+        .text-content {
+            margin-bottom: 15px;
+            line-height: 1.6;
             color: #444;
         }
 
-        .icon {
-            font-size: 24px;
-            margin-right: 10px;
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .team-member {
+            text-align: center;
+        }
+
+        .member-image {
+            width: 120px;
+            height: 120px;
+            border-radius: 60px;
+            margin-bottom: 10px;
+            object-fit: cover;
+        }
+
+        .member-name {
+            font-weight: bold;
+            margin-bottom: 5px;
             color: #2ea32e;
+        }
+
+        .member-position {
+            font-size: 14px;
+            color: #666;
+        }
+
+        .join-button {
+            display: block;
+            margin: 30px auto;
+            padding: 15px 30px;
+            background: #2ea32e;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            text-align: center;
+            font-weight: bold;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .join-button:hover {
+            background: #247024;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 8px rgba(0,0,0,0.15);
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Возможности Ассоциации</h1>
+    <div class="header">
+        <h1>Ассоциация "Народный Фермер"<br>г. Новосибирск</h1>
+    </div>
 
-        <div class="section">
-            <h2>📚 Консультационная поддержка</h2>
-            <p>Квалифицированные советы по различным аспектам ведения бизнеса, обучающие семинары и курсы по современным технологиям в сельском хозяйстве.</p>
-        </div>
-
-        <div class="section">
-            <h2>🚛 Логистика и сбыт</h2>
-            <p>Помощь в организации сбыта продукции, поиске покупателей, организации доставки и заключении договоров с торговыми сетями.</p>
-        </div>
-        <div class="section">
-            <h2>💰 Кредитование и финансирование</h2>
-            <p>Доступ к кредитным ресурсам на выгодных условиях, содействие в получении государственной поддержки.</p>
-        </div>
-
-        <div class="section">
-            <h2>📊 Информационное сопровождение</h2>
-            <p>Аналитические отчёты, прогнозы рынка, организация выставок и ярмарок для установления деловых контактов.</p>
-        </div>
-
-        <div class="section">
-            <h2>🔬 Научно-техническое сотрудничество</h2>
-            <p>Внедрение современных технологий, инновационных методов выращивания культур, биотехнологий и автоматизации.</p>
-        </div>
-
-        <div class="section">
-            <h2>⚖️ Защита интересов фермеров</h2>
-            <p>Участие в разработке законодательных актов, защита прав фермеров, посредничество в разрешении споров.</p>
+    <div class="section">
+        <div class="section-title">О нас</div>
+        <div class="text-content">
+            Ассоциация фермерских хозяйств АгроСоюз работает над повышением эффективности малых форм хозяйствования на селе. Развитие малых форм хозяйствования в Новосибирской области является одним из ключевых направлений социально-экономического развития региона.
+            </div>
+        <div class="text-content">
+            Малые формы хозяйствования играют важную роль в сельском хозяйстве и экономике региона, предоставляя рабочие места, способствуя развитию местного производства и обеспечивая продовольственную безопасность.
         </div>
     </div>
+
+    <div class="section">
+        <div class="section-title">Наша деятельность</div>
+        <div class="text-content">
+            Ассоциация «АгроСоюз» реализует ряд значимых проектов, направленных на поддержку малых форм хозяйствования в агропромышленной сфере. Эти проекты охватывают широкий спектр вопросов, начиная от улучшения доступа к финансированию и заканчивая развитием кооперации и внедрением цифровых технологий.
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">Наша команда</div>
+        <div class="team-grid">
+            <div class="team-member">
+                <img src="https://народныйфермер-нск.рф/wp-content/uploads/2024/10/sasha4-300x300.jpg" class="member-image" alt="Александр Огурцов">
+                <div class="member-name">Александр Огурцов</div>
+                <div class="member-position">Директор Ассоциации</div>
+            </div>
+            <div class="team-member">
+                <img src="https://народныйфермер-нск.рф/wp-content/uploads/2024/10/photo_5244946665704643985_y-450x450.jpg" class="member-image" alt="Данил Волков">
+                <div class="member-name">Данил Волков</div>
+                <div class="member-position">Руководитель правового обеспечения</div>
+            </div>
+            <div class="team-member">
+                <img src="https://народныйфермер-нск.рф/wp-content/uploads/2024/10/denis-300x300.jpg" class="member-image" alt="Денис Данилов">
+                <div class="member-name">Денис Данилов</div>
+                <div class="member-position">Коммерческий директор</div>
+            </div>
+            <div class="team-member">
+                <img src="https://народныйфермер-нск.рф/wp-content/uploads/2025/01/ilya-300x300.jpg" class="member-image" alt="Толмачев Илья">
+                <div class="member-name">Толмачев Илья</div>
+                <div class="member-position">Исполнительный директор</div>
+            </div>
+        </div>
+    </div>
+
+    <button onclick="openJoinPage()" class="join-button">
+        Вступить в Ассоциацию
+    </button>
 
     <script>
         let tg = window.Telegram.WebApp;
         tg.ready();
         tg.expand();
+
+        function openJoinPage() {
+            tg.openLink('https://xn----7sbmeawknecfezfcs7b7h.xn--p1ai/join-in-association/');
+        }
     </script>
 </body>
 </html>
